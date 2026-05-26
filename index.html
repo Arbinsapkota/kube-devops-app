@@ -1,23 +1,28 @@
-document.title = "First Docker Project | Arbin";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>First Docker Project | Arbin</title>
 
-const styleLink = document.createElement("link");
-styleLink.rel = "stylesheet";
-styleLink.href = "style.css";
-document.head.appendChild(styleLink);
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />  
+</head>
 
-document.body.innerHTML = `
+<body>
   <div class="card">
-    <div class="badge">🚀 FIRST KUBERNETES DOCKER PROJECT</div>
+    <div class="badge">🚀 FIRST DOCKER PROJECT</div>
 
     <h1>
       Hey Pretty Stranger 👋 <br />
-      Kubernetes + Docker + CI/CD with & GitHub <br />
-      Welcome to My App!
+      Docker  kubernetes+ CI/CD with  GitHub <br />
+      Welcome to My App! 
     </h1>
 
     <p class="subtitle">
-      My first Kubernetes + Docker application deployed using
-      <strong> CI/CD</strong> and <strong>GitHub</strong>
+      My first Dockerized application deployed using
+      <strong>Kubernetes CI/CD</strong> and <strong>GitHub</strong>
     </p>
 
     <div class="info">
@@ -27,7 +32,8 @@ document.body.innerHTML = `
       </div>
       <div class="info-box">
         <h3>🔁 CI/CD</h3>
-        <p>Automated Pipeline</p>
+        <p>Automated Pipeline 
+        </p>
       </div>
       <div class="info-box">
         <h3>⚙️ Jenkins</h3>
@@ -47,22 +53,22 @@ document.body.innerHTML = `
       </a>
     </footer>
   </div>
-`;
 
-function getCurrentDateTime() {
-  const now = new Date();
-  return (
-    "Your local time: " +
-    now.toDateString() +
-    " • " +
-    now.toLocaleTimeString()
-  );
-}
+  <script>
+    function getCurrentDateTime() {
+      const now = new Date();
+      return (
+        "Your local time: " +
+        now.toDateString() +
+        " • " +
+        now.toLocaleTimeString()
+      );
+    }
 
-const dateElement = document.getElementById("date");
-if (dateElement) {
-  dateElement.innerHTML = getCurrentDateTime();
-  setInterval(() => {
-    dateElement.innerHTML = getCurrentDateTime();
-  }, 1000);
-}
+    document.getElementById("date").innerHTML = getCurrentDateTime();
+    setInterval(() => {
+      document.getElementById("date").innerHTML = getCurrentDateTime();
+    }, 1000);
+  </script>
+</body>
+</html>
